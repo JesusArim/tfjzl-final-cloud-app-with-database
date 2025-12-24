@@ -144,7 +144,7 @@ def show_exam_result(request, course_id, submission_id):
     choices = submission.choices.all()
 
     total_score = 0
-    questions = course.questions_set.all() 
+    questions = course.question_set.all() 
 
     for question in questions:
         correct_choices = question.choice_set.filter(is_correct=True)
